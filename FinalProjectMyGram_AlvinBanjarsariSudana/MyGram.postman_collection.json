@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "19538204-54bd-49a8-ab98-731dd3f1b1d7",
+		"name": "MyGram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32799785",
+		"_collection_link": "https://www.postman.com/alvinsudana/workspace/alvinbsudana/collection/32799785-19538204-54bd-49a8-ab98-731dd3f1b1d7?action=share&source=collection_link&creator=32799785"
+	},
+	"item": [
+		{
+			"name": "UserRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"alvin.sudana@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"full_name\" : \"Alvin B S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"alvin.sudana@gmail.com\",\r\n    \"password\" : \"123457\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhotoGetAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jYUBnbWFpbC5jb20iLCJpZCI6Nn0.EWSG9Mefap5kUSjzX12z8OoHC6pyXDVwzYhgjAI-ie0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/photo/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhotoGetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/photo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhotoCreatePhoto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlemFAZ21haWwuY29tIiwiaWQiOjR9.apLpzt5O16nuaa3vs-DGmICn7chWDXDgRlW7IWeD68A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "photo2",
+							"type": "text"
+						},
+						{
+							"key": "photo_url",
+							"value": "http://photo2.com",
+							"type": "text"
+						},
+						{
+							"key": "caption",
+							"value": "captionphoto2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/photo/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhotoUpdatePhoto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "updatedtitle",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "updated description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PhotoDeletePhoto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/photo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentCreateComment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "bantal",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "keren banget kakak",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080comment"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentGetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/comment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentUpdateComment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9jYUBnbWFpbC5jb20iLCJpZCI6Nn0.EWSG9Mefap5kUSjzX12z8OoHC6pyXDVwzYhgjAI-ie0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "message",
+							"value": "updatedcomment4",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "updated description",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/comment/11",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"11"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "updatedcomment4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentDeleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/comment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SocialGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/social",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SocialGetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/social/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SocialCreateSocial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "bantal",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "keren banget kakak",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/social",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SocialUpdateSocial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsdmluLnN1ZGFuYUBnbWFpbC5jb20iLCJpZCI6MX0.Z7n7fnoRnqYcqP_rHy3VWPlUeU_RstXnIC9djcUogk0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "updatedtitle",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "updated description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/social/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SocialDeleteSocial",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/social/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
