@@ -2,6 +2,7 @@
 
 MyGram adalah sebuah sosial media dimana user dapat membuat akun yang dapat menggunggah foto, membuat comment untuk foto orang lian , dan memposting sosial media lainnya.
 
+![alt text](https://github.com/alvinsudana/FinalProjectMyGram_AlvinBanjarsariSudana-directory/blob/16833bae7422ea35422947f8dee8b64c6a82c4aa/FinalProjectMyGram_AlvinBanjarsariSudana/table-table%20dan%20field-field.jpg)
 
 Untuk endpoint yang digunakan adalah sebagai berikut:
 1. User:
